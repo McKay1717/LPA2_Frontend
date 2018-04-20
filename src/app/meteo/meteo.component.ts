@@ -23,7 +23,6 @@ export class MeteoComponent implements OnInit {
   LoadData() {
     for (let i = 0; i < this.towns.length; i++) {
          this.api.GetTown(this.towns[i].id).subscribe(town => this.towns[i] = town);
-          console.log(this.towns[i].id);
     }
   }
 }
