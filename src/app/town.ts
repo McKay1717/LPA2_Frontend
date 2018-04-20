@@ -5,7 +5,7 @@ export class Town {
   town_name: string = " "
   latitude: number = 0.0
   longitude: number = 0.0
-  weather: Weather = null
+  weather: Weather
 
     constructor(values: Object = {}) {
       Object.assign(this, values);
