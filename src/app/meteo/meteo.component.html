@@ -1,5 +1,14 @@
-<p>
-  meteo works!
-  {{ town.icon }}
-  {{ town.temperature }}
-</p>
+<mat-grid-list cols="3" rowHeight="600px">
+  <mat-grid-tile *ngFor="let town of towns">
+    <mat-card class="example-card">
+    <mat-card-header>
+      <mat-card-title>Météo de la ville de {{ town.town_name }} : {{ town.weather.summary }}<wi name="forecast-io-{{ town.weather.icon }}"></wi></mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        Temperature: {{ town.weather.temperature }} <wi name="celsius"></wi>
+        <br>
+        Risque de précipitation: {{ town.weather.precipProbability }}%
+    </mat-card-content>
+  </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>

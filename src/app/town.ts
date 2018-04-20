@@ -1,8 +1,14 @@
+import { Weather } from './weather';
+
 export class Town {
   id: number
-  name: string
-  icon: string
-  temperature: number
-  
+  town_name: string
+  latitude: number
+  longitude: number
+  weather: Weather
+
+    constructor(values: Object = {}) {
+      Object.assign(this, values);
+  }
 
 }
